@@ -121,13 +121,13 @@ public class AmazonDynamoDBSample {
             System.out.println("Table Description: " + tableDescription);
 
             // Add an item
-            Map<String, AttributeValue> item = newItem(1,"James");
+            Map<String, AttributeValue> item = newItem(1,"Joey");
             PutItemRequest putItemRequest = new PutItemRequest(tableName, item);
             PutItemResult putItemResult = dynamoDB.putItem(putItemRequest);
             System.out.println("Result: " + putItemResult);
 
             // Add another item
-            item = newItem(1980, "Billy Bob");
+            item = newItem(1980, "Billy Joe");
             putItemRequest = new PutItemRequest(tableName, item);
             putItemResult = dynamoDB.putItem(putItemRequest);
             System.out.println("Result: " + putItemResult);
